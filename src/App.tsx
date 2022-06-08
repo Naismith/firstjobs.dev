@@ -1,6 +1,7 @@
 import './styles.css';
 import { JobBoardListings } from './components/JobBoardListings';
 import TopNav from './components/TopNav';
+import Modal from './components/Modal';
 
 export default function App() {
   return (
@@ -14,6 +15,7 @@ export default function App() {
           An aggregation of companies looking to hire first workers with no
           experience required.
         </h2>
+        <Modal />
         <JobBoardListings />
       </main>
       <footer className='footer'>Footer</footer>
