@@ -1,11 +1,9 @@
 export const SubmitAJob = () => (
   <iframe
-    title="Submit Job AirTable Form"
-    class="airtable-embed"
-    src="https://airtable.com/embed/shruVtGUmrM6Y3GNI?backgroundColor=purple"
-    frameborder="0"
-    onmousewheel=""
-    width="100%"
-    height="533"
+    title='Submit Job AirTable Form'
+    className='airtable-embed'
+    src='https://airtable.com/embed/shruVtGUmrM6Y3GNI?backgroundColor=purple'
+    width='100%'
+    height='533'
   ></iframe>
 );
