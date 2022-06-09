@@ -1,7 +1,6 @@
 import { JobBoardListings } from 'src/components/JobBoardListings';
 import { Container } from '@mui/material';
 import TopNav from 'src/components/TopNav';
-import Modal from 'src/components/Modal';
 import Footer from '../components/Footer';
 
 const Home = () => (
