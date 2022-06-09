@@ -5,5 +5,5 @@ export const JobBoardListings = () => (
     src="https://airtable.com/embed/shrwgDb2sjP34pODp?backgroundColor=purple"
     width="100%"
     height="533"
-  ></iframe>
+  />
 );
