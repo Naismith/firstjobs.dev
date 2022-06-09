@@ -1,6 +1,5 @@
-import React from "react";
 import styled from "@emotion/styled";
-import { Typography, Box } from "@mui/material";
+import { Typography } from "@mui/material";
 
 const Background = styled.div`
   background-color: #111;

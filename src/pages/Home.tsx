@@ -1,7 +1,5 @@
 import { JobBoardListings } from 'src/components/JobBoardListings';
 import { Container } from '@mui/material';
-import TopNav from 'src/components/TopNav';
-import { Footer } from 'src/components/layout/Footer';
 
 const Home = () => (
   <Container maxWidth='lg'>
