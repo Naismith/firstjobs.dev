@@ -1,8 +1,9 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import LinearProgress from "@mui/material/LinearProgress";
 import Box from "@mui/material/Box";
 
 export const SubmitAJob = () => {
+  const [height, setHeight] = useState("500px");
   const [loading, setLoading] = useState(true);
 
   const hideSpinner = () => {
@@ -21,10 +22,18 @@ export const SubmitAJob = () => {
         className="airtable-embed"
         src="https://airtable.com/embed/shruVtGUmrM6Y3GNI?backgroundColor=purple"
         width="100%"
-        height="533"
-        onLoad={hideSpinner}
+        seamless
+        style={{
+          border: "none",
+          minHeight: "700px",
+        }}
+        onLoad={(test) => {
+          setLoading(false);
+          //   console.log(test.currentTarget.contentDocument?.body.scrollHeight);
+          //   console.log(test.currentTarget.contentWindow);
+        }}
         hidden={loading}
-      ></iframe>
+      />
     </>
   );
 };
