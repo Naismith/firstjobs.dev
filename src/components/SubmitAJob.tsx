@@ -1,9 +1,8 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import LinearProgress from "@mui/material/LinearProgress";
 import Box from "@mui/material/Box";
 
 export const SubmitAJob = () => {
-  const [height, setHeight] = useState("500px");
   const [loading, setLoading] = useState(true);
 
   const hideSpinner = () => {
@@ -27,11 +26,7 @@ export const SubmitAJob = () => {
           border: "none",
           minHeight: "700px",
         }}
-        onLoad={(test) => {
-          setLoading(false);
-          //   console.log(test.currentTarget.contentDocument?.body.scrollHeight);
-          //   console.log(test.currentTarget.contentWindow);
-        }}
+        onLoad={hideSpinner}
         hidden={loading}
       />
     </>
