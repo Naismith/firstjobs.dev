@@ -21,10 +21,14 @@ export const SubmitAJob = () => {
         className="airtable-embed"
         src="https://airtable.com/embed/shruVtGUmrM6Y3GNI?backgroundColor=purple"
         width="100%"
-        height="533"
+        seamless
+        style={{
+          border: "none",
+          minHeight: "700px",
+        }}
         onLoad={hideSpinner}
         hidden={loading}
-      ></iframe>
+      />
     </>
   );
 };

@@ -1,27 +1,17 @@
 import "./styles.css";
-import { JobBoardListings } from "./components/JobBoardListings";
-import { Container } from "@mui/material";
-import TopNav from "./components/TopNav";
-import Modal from "./components/Modal";
+
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import Home from "src/pages/Home";
+import Share from "src/pages/Share";
 
 export default function App() {
   return (
-    <div className="layout">
-      <TopNav />
-      {/* <div className='header'>Header</div> */}
-
-      <main className="main">
-        <Container maxWidth="lg">
-          {/* <h1>FirstJobs.dev</h1> */}
-          <h2>
-            An aggregation of companies looking to hire first workers with no
-            experience required.
-          </h2>
-          <Modal />
-          <JobBoardListings />
-        </Container>
-      </main>
-      <footer className="footer">Footer</footer>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/share" element={<Share />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
