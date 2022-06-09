@@ -13,10 +13,20 @@
     "@mui/material": "^5.8.3",
     "@types/react": "^18.0.8",
     "@types/react-dom": "^18.0.0",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.1",
     "react": "18.0.0",
     "react-dom": "18.0.0",
     "react-scripts": "^5.0.1",
     "typescript": "^4.6.3"
+  },
+  "hooks": {
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "src/**/*.{js,ts,jsx,tsx}": [
+      "eslint --fix"
+    ]
   },
   "scripts": {
     "start": "react-scripts start",
