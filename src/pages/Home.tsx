@@ -1,12 +1,11 @@
 import { JobBoardListings } from 'src/components/JobBoardListings';
-import { Container } from '@mui/material';
+import { Container, Typography } from '@mui/material';
 
 const Home = () => (
   <Container maxWidth='lg'>
-    <h2>
-      An aggregation of companies looking to hire first workers with no
-      experience required.
-    </h2>
+    <Typography>
+      A list of companies hiring minimal experience developer roles in Canada.
+    </Typography>
     <JobBoardListings />
   </Container>
 );
