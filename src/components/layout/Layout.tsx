@@ -1,11 +1,13 @@
 import React from 'react';
-import TopNav from 'src/components/TopNav';
+import TopNav from 'src/components/layout/TopNav';
+import { AppBar } from 'src/components/layout/AppBar';
 import { Footer } from 'src/components/layout/Footer';
 import { Outlet } from 'react-router-dom';
 
 export const Layout = () => (
     <div className='layout'>
-        <TopNav />
+        <AppBar />
+        {/* <TopNav /> */}
         <main className='main'>
             <Outlet />
         </main>
