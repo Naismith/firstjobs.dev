@@ -7,11 +7,8 @@ import Typography from '@mui/material/Typography';
 import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
-import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
-import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
-import AdbIcon from '@mui/icons-material/Adb';
 import { Link } from 'src/components/router/Link'
 
 const pages = [{ label: 'View Jobs', to: '/' }, { label: 'Submit A Job', to: '/share' },];
@@ -30,9 +27,9 @@ const Logo = () => (
     </Typography>
 )
 export const AppBar = () => {
-    const [anchorElNav, setAnchorElNav] = React.useState(null);
+    const [anchorElNav, setAnchorElNav] = React.useState<HTMLButtonElement | null>(null);
 
-    const handleOpenNavMenu = (event: any) => {
+    const handleOpenNavMenu = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
         setAnchorElNav(event.currentTarget);
     };
 
@@ -46,31 +43,10 @@ export const AppBar = () => {
                 <Toolbar disableGutters>
                     <Box sx={{ display: { xs: 'none', md: 'flex' }, mr: 2 }}>
                         <Logo />
-
                     </Box>
-                    {/* <Typography
-                        variant="h6"
-                        noWrap
-                        component="a"
-                        href="/"
-                        sx={{
-                            mr: 2,
-                            display: { xs: 'none', md: 'flex' },
-                            fontFamily: 'monospace',
-                            fontWeight: 700,
-                            letterSpacing: '.3rem',
-                            color: 'inherit',
-                            textDecoration: 'none',
-                        }}
-                    >
-                        LOGO
-                    </Typography> */}
-
-
 
                     <Box sx={{ display: { xs: 'flex', md: 'none' }, mr: 2, flexGrow: 1, }}>
                         <Logo />
-
                     </Box>
 
                     <Box sx={{ flexGrow: 0, display: { xs: 'flex', md: 'none' } }}>
@@ -79,7 +55,7 @@ export const AppBar = () => {
                             aria-label="account of current user"
                             aria-controls="menu-appbar"
                             aria-haspopup="true"
-                            onClick={handleOpenNavMenu}
+                            onClick={e => handleOpenNavMenu(e)}
                             color="inherit"
                         >
                             <MenuIcon />
