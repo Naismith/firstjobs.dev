@@ -5,6 +5,22 @@ import { Typography } from '@mui/material';
 const Background = styled.div`
   color: white;
   padding: 20px 0;
+  & button {
+    background-color: #1976d2;
+    color: white;
+    border-radius: 10px;
+    border: none;
+    padding: 8px;
+    margin: 5px 0;
+    font-size: 0.9em;
+  }
+  & input {
+    padding: 7px;
+    margin: 0 5px 0 0;
+    border-radius: 10px;
+    border: 1px black solid;
+    font-size: 0.9em;
+  }
 `;
 
 const SubscribeText = styled(Typography)`
