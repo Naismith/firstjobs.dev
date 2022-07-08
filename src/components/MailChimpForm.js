@@ -27,7 +27,7 @@ const SubscribeText = styled(Typography)`
   color: black;
 `;
 
-const url = `https://gmail.us14.list-manage.com/subscribe/post?u=${process.env.REACT_APP_U}&id=${process.env.REACT_APP_ID}`;
+const url = process.env.REACT_APP_URL;
 
 // simplest form (only email)
 const SimpleForm = () => <MailchimpSubscribe url={url} />;
